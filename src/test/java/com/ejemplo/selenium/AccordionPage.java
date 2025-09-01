@@ -27,8 +27,6 @@ public class AccordionPage {
     private final SelenideElement reviewsHeader2 = $x("(//nb-accordion-item-header[contains(., 'Reviews')])[2]");
     private final SelenideElement editHeader2 = $x("(//nb-accordion-item-header[contains(., 'Edit')])[2]");
 
-    
-    
     // Acciones
 
     ///////////////////////////////////////////////////////////
@@ -76,9 +74,6 @@ public class AccordionPage {
         editHeader.click();
         return this;
     }
-    
-    
-    
     
     
     ///////////////////////////////////////////////////////////
