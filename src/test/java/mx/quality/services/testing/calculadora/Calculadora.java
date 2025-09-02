@@ -51,8 +51,7 @@ public class Calculadora {
                     Resta resta = new Resta();
                     resultado = resta.resta(a, b);
                     System.out.println("Resultado de la resta: " + resultado);
-                    
-                	//System.out.println("Opcion en construcción");
+                                    	
                     break;
                 case 3:
                     Multiplicacion multi = new Multiplicacion();
@@ -62,7 +61,7 @@ public class Calculadora {
                 case 4:
                     Division div = new Division();
                     double res = div.division(a, b);
-                    System.out.println("Resultado de la multiplicación: " + res);
+                    System.out.println("Resultado de la división: " + res);
                     break;
 
                 default:
