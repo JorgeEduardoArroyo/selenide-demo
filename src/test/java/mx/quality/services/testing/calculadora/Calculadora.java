@@ -13,8 +13,9 @@ public class Calculadora {
             System.out.println("\nCalculadora");
             System.out.println("1. Suma");
             System.out.println("2. Resta");
-            System.out.println("3. Multiplicacion");
-            System.out.println("4. Salir");
+            System.out.println("3. Multiplicación");
+            System.out.println("4. División");
+            System.out.println("5. Salir");
             System.out.print("\n¿Qué opción requieres? ");
 
             // Leer opción
@@ -25,12 +26,13 @@ public class Calculadora {
                 continue;
             }
 
-            if (opcion == 4) {
+            if (opcion == 5) {
                 System.out.println("Saliendo...");
+                // Termina el programa (PENDIENTE)
                 break;
             }
 
-            // Leer los dos valores
+            // Leer valores
             System.out.print("Valor primer número: ");
             int a = Integer.parseInt(scanner.nextLine());
 
@@ -46,18 +48,23 @@ public class Calculadora {
                     System.out.println("Resultado de la suma: " + resultado);
                     break;
                 case 2:
-                	/*
                     Resta resta = new Resta();
-                    resultado = resta.restar(a, b);
+                    resultado = resta.resta(a, b);
                     System.out.println("Resultado de la resta: " + resultado);
-                    */
-                	System.out.println("Opcion en construcción");
+                    
+                	//System.out.println("Opcion en construcción");
                     break;
                 case 3:
                     Multiplicacion multi = new Multiplicacion();
                     resultado = multi.multiplicar(a, b);
                     System.out.println("Resultado de la multiplicación: " + resultado);
                     break;
+                case 4:
+                    Division div = new Division();
+                    double res = div.division(a, b);
+                    System.out.println("Resultado de la multiplicación: " + res);
+                    break;
+
                 default:
                     System.out.println("Opción no válida. Intenta de nuevo.");
                     break;
