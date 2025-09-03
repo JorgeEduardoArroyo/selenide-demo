@@ -59,10 +59,14 @@ public class Calculadora {
                     System.out.println("Resultado de la multiplicación: " + resultado);
                     break;
                 case 4:
-                    Division div = new Division();
-                    double res = div.division(a, b);
-                    System.out.println("Resultado de la división: " + res);
-                    break;
+                	 Division div = new Division();
+                     try {
+                         double res = div.division(a, b);
+                         System.out.println("Resultado de la división: " + res);
+                     } catch (ArithmeticException e) {
+                         System.out.println("❌ Error: " + e.getMessage());
+                     }
+                     break;
 
                 default:
                     System.out.println("Opción no válida. Intenta de nuevo.");
