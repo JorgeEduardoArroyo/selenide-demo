@@ -15,10 +15,10 @@ public class Calculadora {
             System.out.println("2. Resta");
             System.out.println("3. Multiplicación");
             System.out.println("4. División");
-            System.out.println("5. Salir");
+            System.out.println("5. Raiz Cuadrada");
+            System.out.println("6. Salir");
             System.out.print("\n¿Qué opción requieres? ");
 
-            // Leer opción
             try {
                 opcion = Integer.parseInt(scanner.nextLine());
             } catch (NumberFormatException e) {
@@ -26,21 +26,29 @@ public class Calculadora {
                 continue;
             }
 
-            if (opcion == 5) {
+            if (opcion == 6) {
                 System.out.println("Saliendo...");
-                // Termina el programa (PENDIENTE)
                 break;
             }
 
-            // Leer valores
-            System.out.print("Valor primer número: ");
-            int a = Integer.parseInt(scanner.nextLine());
+            
+            int a = 0;
+            int b = 0;
+            if (opcion == 5) {
+                System.out.print("Valor número: ");
+                a = Integer.parseInt(scanner.nextLine());
+            }
+            else {
+                System.out.print("Valor primer número: ");
+                a = Integer.parseInt(scanner.nextLine());
 
-            System.out.print("Valor segundo número: ");
-            int b = Integer.parseInt(scanner.nextLine());
+                System.out.print("Valor segundo número: ");
+                b = Integer.parseInt(scanner.nextLine());
+            }
 
             int resultado = 0;
-
+            double res = 0;
+            
             switch (opcion) {
                 case 1:
                     Suma suma = new Suma();
@@ -50,8 +58,7 @@ public class Calculadora {
                 case 2:
                     Resta resta = new Resta();
                     resultado = resta.resta(a, b);
-                    System.out.println("Resultado de la resta: " + resultado);
-                                    	
+                    System.out.println("Resultado de la resta: " + resultado);              	
                     break;
                 case 3:
                     Multiplicacion multi = new Multiplicacion();
@@ -60,10 +67,14 @@ public class Calculadora {
                     break;
                 case 4:
                     Division div = new Division();
-                    double res = div.division(a, b);
+                    res = div.division(a, b);
                     System.out.println("Resultado de la división: " + res);
                     break;
-
+                case 5:
+                    RaizCuadrada raiz = new RaizCuadrada();
+                    res = raiz.raiz(a);
+                    System.out.println("Resultado de la raiz cuadrada: " + res);
+                    break;
                 default:
                     System.out.println("Opción no válida. Intenta de nuevo.");
                     break;
