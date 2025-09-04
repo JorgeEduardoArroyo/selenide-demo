@@ -66,9 +66,13 @@ public class Calculadora {
                     System.out.println("Resultado de la multiplicación: " + resultado);
                     break;
                 case 4:
-                    Division div = new Division();
-                    res = div.division(a, b);
-                    System.out.println("Resultado de la división: " + res);
+                	Division div = new Division();
+                    try {
+                        double res2 = div.division(a, b);
+                        System.out.println("Resultado de la división: " + res2);
+                    } catch (ArithmeticException e) {
+                        System.out.println("❌ Error: " + e.getMessage());
+                    }
                     break;
                 case 5:
                     RaizCuadrada raiz = new RaizCuadrada();
