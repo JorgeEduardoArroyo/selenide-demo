@@ -23,5 +23,15 @@ public class Suma {
 	}
 	
 	
+	public double suma(double aP, double bP) {
+		
+		
+		double resultado = aP+bP;
+		
+		return resultado;
+	}
+	
+	
+	
 
 }
